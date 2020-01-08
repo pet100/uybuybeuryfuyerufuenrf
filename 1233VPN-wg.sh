@@ -25,14 +25,14 @@ read -p "[?] Please enter your VPN account number: " -r APIKEY
 
 #echo "[+] Contacting VPN_API in Server-FR_PARIS-."
 
-function FR {
+function FR-VPN {
         
 }
 
-function PL {
+function PL_VPN {
         
 }
-function ALL {
+function ALL_VPN {
         
 }
 
@@ -66,7 +66,7 @@ echo
     echo "[++] Writing WriteGuard configuration file to '/etc/wireguard/...conf'."
     umask 077
     mkdir -p /etc/wireguard/
-    touch /etc/wireguard/wgFR.conf
+    #touch /etc/wireguard/wgFR.conf
     rm -r /etc/wireguard/wgFR.conf
     cat > /etc/wireguard/wgFR.conf <<-_EOF
         [Interface]
@@ -142,7 +142,7 @@ echo
     echo "[++] Writing WriteGuard configuration file to '/etc/wireguard/...conf'."
     umask 077
     mkdir -p /etc/wireguard/
-    touch /etc/wireguard/wgPL.conf
+    #touch /etc/wireguard/wgPL.conf
     rm -r /etc/wireguard/wgPL.conf
     cat > /etc/wireguard/wgPL.conf <<-_EOF
         [Interface]
@@ -213,7 +213,7 @@ fi
     echo "[++] Writing WriteGuard configuration file to '/etc/wireguard/wgFR.conf'."
     umask 077
     mkdir -p /etc/wireguard/
-    touch /etc/wireguard/wgFR.conf
+    #touch /etc/wireguard/wgFR.conf
     rm -r /etc/wireguard/wgFR.conf
     cat > /etc/wireguard/wgFR.conf <<-_EOF
         [Interface]
@@ -245,7 +245,7 @@ echo
     echo "[++] Writing WriteGuard configuration file to '/etc/wireguard/...conf'."
     umask 077
     mkdir -p /etc/wireguard/
-    touch /etc/wireguard/wgPL.conf
+    #touch /etc/wireguard/wgPL.conf
     rm -r /etc/wireguard/wgPL.conf
     cat > /etc/wireguard/wgPL.conf <<-_EOF
         [Interface]
@@ -263,7 +263,7 @@ echo "[+++++] Success. The following commands may be run for connecting to VPN:"
 
         echo
     echo "  \$ wg-quick up wgPL"
-    echo "  \$ wg-quick up wgPL"
+    echo "  \$ wg-quick up wgFR"
 
 echo
 echo "[!!]Please wait up to 60 seconds for your public key to be added to the servers."
@@ -298,11 +298,11 @@ else
 fi
                         ;;
                 4)
-                        echo "Fin du script"
+                        echo "Bye Bye"
                         exit 0
                         ;;
                 *)
-                        echo "Choix incorrect"
+                        echo "Incorrect choice"
                         ;;
         esac
     done
