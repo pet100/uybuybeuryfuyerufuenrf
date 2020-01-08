@@ -25,7 +25,7 @@ read -p "[?] Please enter your VPN account number: " -r APIKEY
 
 #echo "[+] Contacting VPN_API in Server-FR_PARIS-."
 
-function FR-VPN {
+function FR_VPN {
         
 }
 
@@ -46,7 +46,7 @@ do
         case $var in
                 1)
                         # Appel de la fonction sauve
-                        FR
+                        FR_VPN
 
 echo "[+] Contacting VPN_API in Server-FR_PARIS-."
 echo
@@ -123,7 +123,7 @@ fi
                         ;;
                 2)
                         # Appel de la fonction restaure
-                        PL
+                        PL_VPN
                         echo "[+] Contacting VPN_API in Server-PL_WAW-."
 echo
                         RESPONSE="$(curl -LsS -k --user admin:password --header 'Content-Type: application/json' --header 'Accept: application/json' -X POST --data '{"server_id":"10","client_description":"0000"}'  https://pierro100-eval-test.apigee.net/vpn_fr/api/clients/add_to_server/10?apikey={"$APIKEY"})" || die "Unable to connect to DAV_VPN_API."
@@ -196,6 +196,7 @@ fi
 
                         ;;
                 3)
+                        ALL_VPN
                         # Appel de la fonction restaure
                         RESPONSE="$(curl -LsS -k --user admin:password --header 'Content-Type: application/json' --header 'Accept: application/json' -X POST --data '{"server_id":"11","client_description":"0000"}'  https://pierro100-eval-test.apigee.net/vpn_fr/api/clients/add_to_server/11?apikey={"$APIKEY"})" || die "Unable to connect to DAV_VPN_API."
     FIELDS="$(jq -r '.status,.message' <<<"$RESPONSE")" || die "Unable to parse response."
