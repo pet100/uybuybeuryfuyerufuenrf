@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 # SPDX-License-Identifier: GPL-2.0
 #
 # Copyright (C) 2016-2018 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
 
 die() {
-	echo "[-] Error: Oops, your account number seems to be wron $1" >&2 
+	echo "[-] Error: Oops, your account number seems to be wron $1" >&2
+
 	exit 1
 }
 
