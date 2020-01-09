@@ -235,13 +235,13 @@ echo $'\e[1;33m'[!!]Please wait up to 60 seconds for your public key to be added
     esac
 }
 
-if confirm "Are you sure you want to display one of your configurations?"; then
+    confirm "Are you sure you want to display one of your configurations?"; then
     echo
     read -p "[?] Which configuration Do you want to display * Answer with the country code 'FR':  " -r PAYS
     echo
     cat  /etc/wireguard/wg"$PAYS".conf
     #cat  /etc/wireguard/wgPL.conf
-fi
+
                         ;;
                 5)
                          # echo $'\e[1;46m'[☻]GO$'\e[0m'
