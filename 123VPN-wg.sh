@@ -239,20 +239,22 @@ if confirm "Are you sure you want to display one of your configurations?"; then
     echo
     read -p "[?] Which configuration Do you want to display * Answer with the country code 'FR':  " -r PAYS
     echo
+    echo $'\e[1;36m'▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼:$'\e[0m'
     cat  /etc/wireguard/wg"$PAYS".conf
+    echo $'\e[1;36m'▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲:$'\e[0m'
     #cat  /etc/wireguard/wgPL.conf
 fi
                         ;;
                 5)
                       # echo $'\e[1;46m'[☻]GO$'\e[0m'
                          read -p "[?] Which server do you want to connect *Answer with the country code 'FR':  " -r PAYS
-                         sudo wg-quick up wg"$PAYS"
+			 sudo wg-quick up wg"$PAYS"
                          echo $'\e[1;46m'[☻]GO..............$'\e[0m'
 
 
                         ;;                        
                 6)
-                        echo $'\e[1;33m'[☻]ByeBye..............$'\e[0m'
+                        echo $'\e[1;46m'[☻]ByeBye..............$'\e[0m'
                         Exit 0
                         ;;
                 *)
