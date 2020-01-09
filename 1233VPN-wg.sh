@@ -3,8 +3,8 @@
 #
 # Copyright (C) 2016-2018 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
 
-<<-_EOF
-
+cat <<EOF
+ 
             ██╗   ██╗██████╗ ███╗   ██╗            
             ██║   ██║██╔══██╗████╗  ██║            
 █████╗█████╗██║   ██║██████╔╝██╔██╗ ██║█████╗█████╗
