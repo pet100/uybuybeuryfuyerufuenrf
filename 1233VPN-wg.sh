@@ -24,13 +24,6 @@ type jq >/dev/null || die "Please install jq and then try again."
 read -p "[?] Please enter your VPN account number: " -r APIKEY
 
 
-function FR_VPN {
-        echo "Lancement de la sauvegarde"
-}
-
-function PL_VPN {
-        echo "Lancement de la restauration"
-}
 
 echo "[?] Please choose on which server you want to add a configuration."
 PS3="Votre choix (1 - 2 - 3 or 4) : "
