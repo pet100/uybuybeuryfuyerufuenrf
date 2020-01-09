@@ -35,6 +35,7 @@ function PL_VPN {
 function ALL_VPN {
         
 }
+echo "[?] Please choose on which server you want to add a configuration."
 
 PS3="Votre choix (1 - 2 ....) : "
 
