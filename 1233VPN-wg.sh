@@ -6,7 +6,7 @@
 die() {
     echo "[-] Error: Oops, your account number seems to be wron $1" >&2
     exit 1
-}
+
 
 PROGRAM="${0##*/}"
 ARGS=( "$@" )
