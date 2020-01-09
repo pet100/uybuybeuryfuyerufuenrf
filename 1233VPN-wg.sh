@@ -28,7 +28,6 @@ read -p "[?] Please enter your VPN account number: " -r APIKEY
 function FR_VPN {
         
 }
-
 function PL_VPN {
         
 }
