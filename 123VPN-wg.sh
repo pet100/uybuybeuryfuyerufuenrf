@@ -236,12 +236,11 @@ echo $'\e[1;33m'[!!]Please wait up to 60 seconds for your public key to be added
 }
 
 if confirm "Are you sure you want to display one of your configurations?"; then
-    echo
     read -p "[?] Which configuration Do you want to display * Answer with the country code 'FR':  " -r PAYS
-    echo
-    echo $'\e[1;36m'▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼:$'\e[0m'
+    
+    echo $'\e[1;36m'▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼$'\e[0m'
     cat  /etc/wireguard/wg"$PAYS".conf
-    echo $'\e[1;36m'▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲:$'\e[0m'
+    echo $'\e[1;36m'▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲$'\e[0m'
     #cat  /etc/wireguard/wgPL.conf
 fi
                         ;;
