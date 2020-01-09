@@ -244,12 +244,11 @@ if confirm "Are you sure you want to display one of your configurations?"; then
 fi
                         ;;
                 5)
-if                      # echo $'\e[1;46m'[☻]GO$'\e[0m'
+                         # echo $'\e[1;46m'[☻]GO$'\e[0m'
                          read -p "[?] Which server do you want to connect *Answer with the country code 'FR':  " -r PAYS
                          sudo wg-quick up wg"$PAYS"
                          echo $'\e[1;46m'[☻]GO..............$'\e[0m'
 
-fi
                         ;;                        
                 6)
                         echo $'\e[1;33m'[☻]ByeBye..............$'\e[0m'
