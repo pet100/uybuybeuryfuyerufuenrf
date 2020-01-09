@@ -3,7 +3,7 @@
 #
 # Copyright (C) 2016-2018 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
 
-cat <<EOF
+cat << EOF
  
             ██╗   ██╗██████╗ ███╗   ██╗            
             ██║   ██║██╔══██╗████╗  ██║            
@@ -13,9 +13,7 @@ cat <<EOF
               ╚═══╝  ╚═╝     ╚═╝  ╚═══╝            
 EOF                                                   
                                                                                           
-
                                                    
-<<-EOF
 die() {
         echo "[-] Error: Oops, your account number seems to be wron $1" >&2
 
