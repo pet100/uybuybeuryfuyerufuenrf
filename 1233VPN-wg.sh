@@ -35,9 +35,10 @@ function PL_VPN {
 function ALL_VPN {
         
 }
+echo
 echo "[?] Please choose on which server you want to add a configuration."
 
-PS3="Votre choix (1 - 2 ....) : "
+PS3="Votre choix (1 - 2 - 3 or 4) : "
 
 select item in "- Server-FR_PARIS -" "- Server-PL_WAW -" "- Server-ALL -" "- EXIT -"
 do
