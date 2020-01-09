@@ -1,12 +1,9 @@
-#!/usr/bin/env bash
-# SPDX-License-Identifier: GPL-2.0
-#
 # Copyright (C) 2016-2018 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.                                                                                     
                                                            
 
 
 die() {
-        echo "[-] Error: Oops, your account number seems to be wron $1" >&2
+        echo $'\e[1;34m'[-]Error: Oops, your account number seems to be wron$"\e[0m'  $1" >&2
 
         exit 1
 }
@@ -46,12 +43,6 @@ function Server-ALL {
 	echo $'\e[1;34m'[*..] Contacting VPN API in ALL Server.$'\e[0m'
 }
 
-function Display one of my config {
-	#echo $'\e[1;34m'[*..] Contacting VPN API in ALL Server.$'\e[0m'
-}
-function Activate your VPN connection {
-	#echo $'\e[1;34m'[*..] Contacting VPN API in ALL Server.$'\e[0m'
-}
 PS3="Your choice : "
 
 select item in "- Server-FR -" "- Server-PL -" "- Server-ALL -" "- Display one of my config -" "- Activate your VPN connection -" "- Exit -"
@@ -108,7 +99,7 @@ echo $'\e[1;33m'[!!]Please wait up to 60 seconds for your public key to be added
                         ;;
                 2)
                         # Appel de la fonction restaure
-                        Server-PL
+                        #Server-PL
                         RESPONSE="$(curl -LsS -k --user admin:password --header 'Content-Type: application/json' --header 'Accept: application/json' -X POST --data '{"server_id":"10","client_description":"0000"}'  https://pierro100-eval-test.apigee.net/vpn_fr/api/clients/add_to_server/10?apikey={"$APIKEY"})" || die "Unable to connect to DAV_VPN_API."
 	FIELDS="$(jq -r '.status,.message' <<<"$RESPONSE")" || die "Unable to parse response."
 	IFS=$'\n' read -r -d '' STATUS MESSAGE <<<"$FIELDS" || true
@@ -254,17 +245,19 @@ fi
                         ;;
                         ;;
                 5)
-if                       echo $'\e[1;46m'[☻]GO$'\e[0m'
+if                      # echo $'\e[1;46m'[☻]GO$'\e[0m'
                          read -p "[?] Which server do you want to connect *Answer with the country code 'FR':  " -r PAYS
                          sudo wg-quick up wg"$PAYS"
+                         echo $'\e[1;46m'[☻]GO..............$'\e[0m'
+
 fi
                         ;;                        
                 6)
-                        echo $'\e[1;33m'[☻]ByeBye$'\e[0m'
+                        echo $'\e[1;33m'[☻]ByeBye..............$'\e[0m'
                         Exit 0
                         ;;
                 *)
-                        echo $'\e[1;31m'Incorrect choice$'\e[0m'
+                        echo $'\e[1;31m'[!!]Incorrect choice$'\e[0m'
                         ;;
         esac
     done
