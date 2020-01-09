@@ -3,12 +3,20 @@
 #
 # Copyright (C) 2016-2018 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.                                                                                     
                                                    
+
+echo "            ██╗   ██╗██████╗ ███╗   ██╗            
+                  ██║   ██║██╔══██╗████╗  ██║            
+      █████╗█████╗██║   ██║██████╔╝██╔██╗ ██║█████╗█████╗
+      ╚════╝╚════╝╚██╗ ██╔╝██╔═══╝ ██║╚██╗██║╚════╝╚════╝
+                   ╚████╔╝ ██║     ██║ ╚████║            
+                    ╚═══╝  ╚═╝     ╚═╝  ╚═══╝            "
+		    
 die() {
         echo "[-] Error: Oops, your account number seems to be wron $1" >&2
 
         exit 1
 }
-
+		    
 PROGRAM="${0##*/}"
 ARGS=( "$@" )
 SELF="${BASH_SOURCE[0]}"
