@@ -26,11 +26,13 @@ read -p "[?] Please enter your VPN account number: " -r APIKEY
 #echo "[+] Contacting VPN_API in Server-FR_PARIS-."
 
 function FR_VPN {
-        
+        echo "Lancement de la sauvegarde"
 }
+
 function PL_VPN {
-        
+        echo "Lancement de la restauration"
 }
+
 function ALL_VPN {
         
 }
