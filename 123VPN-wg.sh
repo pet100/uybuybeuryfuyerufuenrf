@@ -243,7 +243,6 @@ if confirm "Are you sure you want to display one of your configurations?"; then
     #cat  /etc/wireguard/wgPL.conf
 fi
                         ;;
-                        ;;
                 5)
 if                      # echo $'\e[1;46m'[☻]GO$'\e[0m'
                          read -p "[?] Which server do you want to connect *Answer with the country code 'FR':  " -r PAYS
