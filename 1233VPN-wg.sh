@@ -15,7 +15,7 @@ EOF
                                                                                           
 
                                                    
-<<-_EOF
+<<-EOF
 die() {
         echo "[-] Error: Oops, your account number seems to be wron $1" >&2
 
@@ -320,4 +320,4 @@ fi
         esac
     done
 done
-_EOF
+
