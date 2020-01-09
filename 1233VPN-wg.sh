@@ -32,10 +32,7 @@ function PL_VPN {
         echo "Lancement de la restauration"
 }
 
-function ALL_VPN {
-        
-}
-
+echo "[?] Please choose on which server you want to add a configuration."
 PS3="Votre choix (1 - 2 - 3 or 4) : "
 
 select item in "- Server-FR_PARIS -" "- Server-PL_WAW -" "- Server-ALL -" "- EXIT -"
